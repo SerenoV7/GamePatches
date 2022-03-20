@@ -1,0 +1,13 @@
+PPU-replacethiswithyourppu:
+  Always Load Same BED File:
+    Games:
+      "Persona 5":
+        BLES02247: [ All ]
+        NPEB02436: [ All ]
+        BLUS31604: [ All ]
+        NPUB31848: [ All ]
+    Author: Shujynx
+    Notes: Always loads the same .BED file. Useful for testing. Defaults to Cleave animation
+    Patch Version: 1.0
+    Patch:
+    - [ be32, 0x00b83fb5, 0x30323130 ]

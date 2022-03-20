@@ -1,0 +1,46 @@
+PPU-replacethiswithyourppu:
+  Always Load same Character Model:
+    Games:
+      "Persona 5":
+        BLES02247: [ All ]
+        NPEB02436: [ All ]
+        BLUS31604: [ All ]
+        NPUB31848: [ All ]
+    Author: Shujynx
+    Notes: This forces the game to load the same character model everytime. Defaults to Winter Uniform Protagonist
+    Patch Version: 1.0
+    Patch:
+    # Character Model
+    # Values are in HEX
+    - [ be32, 0x00b474dc, 0x30303031 ] # 0001 (CharacterIDFolder)
+    - [ be32, 0x00b474e2, 0x30303031 ] # 0001 (CharacterMajorIDModel) 
+    - [ be32, 0x00b474e7, 0x3030325f ] # 002  (CharacterMinorIDModel) Replace only the first 3 bytes
+    - [ be16, 0x00b474eb, 0x3030 ] # 00   (CharacterSubIDModel) 
+    - [ be16, 0x00b474ed, 0x2e47 ]
+    - [ byte, 0x00b474ef, 0x4d]
+    - [ be32, 0x00b474f0, 0x44000000 ]
+    #
+    # UNCOMMENT THE LINES BELOW ONLY IF SOMETHING BREAKS
+    #
+    # First Extra Model Call
+    # use is unknown
+    # To replace, replace in this order:
+    # model/character/
+    #- [ be32, 0x00b65c14, 0x30303031 ] # 0001 (characterID)
+    #- [ be32, 0x00b65c1a, 0x30303031 ] # 0001 (CharacterMajorIDModel)
+    #- [ be32, 0x00b65c1f, 0x3030325f ] # 002 (CharacterMinorIDModel) Replace only the first 3 bytes
+    #- [ be16, 0x00b65c23, 0x3030 ] # 00   (CharacterSubIDModel) 
+    #- [ be32, 0x00b65c25, 0x2e47 ]
+    #- [ byte, 0x00b65c27, 0x4d]
+    #- [ be32, 0x00b65c1f, 0x44000000 ]
+    # Second Extra Model Call
+    # use is unknown
+    # To replace, replace in this order:
+    # model/character/
+    #- [ be32, 0x00b65fbc, 0x30303031 ] # 0001 (characterID)
+    #- [ be32, 0x00b65fc2, 0x30303031 ] # 0001 (CharacterMajorIDModel) 
+    #- [ be32, 0x00b65fc7, 0x3030325f ] # 002  (CharacterMinorIDModel) Replace only the first 3 bytes
+    #- [ be16, 0x00b65fcb, 0x3030 ] # 00   (CharacterSubIDModel) 
+    #- [ be16, 0x00b65fcd, 0x2e47 ]
+    #- [ byte, 0x00b65fcf, 0x4d]
+    #- [ be32, 0x00b65fd0, 0x44000000 ]

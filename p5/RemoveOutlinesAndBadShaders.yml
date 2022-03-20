@@ -1,0 +1,23 @@
+PPU-replacethiswithyourppu:
+  Remove Bad Graphics:
+    Games:
+      "Persona 5":
+        BLES02247: [ All ]
+        NPEB02436: [ All ]
+        BLUS31604: [ All ]
+        NPUB31848: [ All ]
+    Author: Shujynx, Rexis
+    Notes:
+    Patch Version: 1.0
+    Patch:
+    # disable uglify shader
+      - [ be32, 0xfedde2, 0x9e001700 ]
+      - [ be32, 0xfedde6, 0xc801001d ]
+      - [ be32, 0xfeddea, 0x00000000 ]
+      - [ be32, 0xfeddee, 0x00000000 ]
+      - [ be32, 0xfeddf2, 0x1e810100 ]
+      - [ be32, 0xfeddf6, 0xc800001d ]
+      - [ be32, 0xfeddfa, 0x00000000 ]
+      - [ be32, 0xfeddfe, 0x00000000 ]
+    #disable outline
+      - [ be32, 0xfe5460, 0x00010000 ]

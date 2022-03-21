@@ -1,0 +1,38 @@
+PPU-replacethiswithyourppu:
+  Always Load Same Persona:
+    Games:
+      "Persona 5":
+        BLES02247: [ All ]
+        NPEB02436: [ All ]
+        BLUS31604: [ All ]
+        NPUB31848: [ All ]
+    Author: Shujynx
+    Notes: Always loads the same Persona Model. Defaults to Arsene
+    Patch Version: 1.0
+    Patch:
+    # Persona Model Call (PS)
+    - [ be32, 0x00b47514, 0x30323031 ] # Persona Folder ID
+    - [ be32, 0x00b4751b, 0x30323031 ] # Persona ID
+    # Persona Model InMenu Call (PSZ)
+    # Use this if the model id is higher than 141
+    - [ be32, 0x00b4753c, 0x30323031 ] # Persona Folder ID
+    - [ be32, 0x00b47544, 0x30323031 ] # Persona ID
+    # Persona Model InMenu Call (PSZ)
+    # Use this if the model is id 141 or lower
+    #- [ be32, 0x00b47534, 0x656e656d ]
+    #- [ be16, 0x00b47538, 0x792f ]
+    #- [ be32, 0x00b4753a, 0x30303035 ] # Enemy Folder ID
+    #- [ be16, 0x00b4753e, 0x2f65 ]
+    #- [ byte, 0x00b47540, 0x6d ]
+    #- [ be32, 0x00b47541, 0x30303035 ] # Enemy ID
+    #- [ be32, 0x00b47545, 0x2e474d44 ]
+    #- [ be16, 0x00b47549, 0x0000 ]
+    #- [ byte, 0x00b4754b, 0x00 ]
+    # Persona Battle Animation Call
+    - [ be32, 0x00b470a8, 0x30323031 ] # Persona Folder ID
+    - [ be32, 0x00b470b0, 0x30323031 ] # Persona ID
+    - [ be32, 0x00b470b5, 0x3030302e ] 
+    - [ be32, 0x00b470b9, 0x47415000 ] 
+    # Persona Velvet Room Animation Call
+    - [ be32, 0x00b823c8, 0x30323031 ] # Persona Folder ID
+    - [ be32, 0x00b823cf, 0x30323031 ] # Persona ID

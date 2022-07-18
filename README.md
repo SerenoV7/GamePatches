@@ -1,4 +1,4 @@
-# GamePatches
+# Game Patches
 Mostly useless stuff, might make some useful stuff
 ## How to use: Persona 5
 Download the .yml file, paste the patch in your patch.yml (**/rpcs3/patches/patch.yml**)

@@ -1,0 +1,9 @@
+gametitle=Persona 3 FES [SLUS_216.21] [94A82AAA]
+comment=Changes the "Persona changed" text to "Iguana"
+author= Shujynx
+version=1
+
+patch=1,EE,00696dc0,word,61756749
+patch=1,EE,00696dc4,word,0000616e
+patch=1,EE,00696dc8,word,00000000
+patch=1,EE,00696dcc,word,00000000

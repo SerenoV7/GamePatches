@@ -1,0 +1,8 @@
+[replacement Change Personas InBattle Text Change]
+//Find the Text
+search = "Change Personas"
+//Replace it with IGUANA
+replacement = "Iguana"
+
+padNull = true
+offset = 0
